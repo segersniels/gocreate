@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+PROJECT="$1"
+DIR="${HOME}/go/src/${PROJECT}"
+
+mkdir -p $DIR
+ln -s $DIR ./$PROJECT
+
+cat > ./${PROJECT}/${PROJECT}.go <<- EOM
+package main
+
+import (
+)
+
+func main() {
+}
+EOM
+
+cd ./$PROJECT ; echo "N" |glide init
