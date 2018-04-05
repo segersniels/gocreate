@@ -17,8 +17,10 @@ ln -s $DIR ./$PROJECT
 
 cat > ./${PROJECT}/${PROJECT}.go <<- EOM
 package main
+
 import (
 )
+
 func main() {
 }
 EOM
