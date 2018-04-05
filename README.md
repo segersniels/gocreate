@@ -7,6 +7,14 @@ The solution? Create a directory in your `$GOPATH/src` and symlink it to whereve
 curl https://raw.githubusercontent.com/segersniels/gocreate/master/gocreate > /usr/local/bin/gocreate ; chmod +x /usr/local/bin/gocreate
 ```
 
+I suggest creating the following alias, so whenever you cd into your symlinked folder you follow the symlink.
+
+```bash
+alias cd='cd -P'
+```
+
+## Code
+
 ```bash
 #!/usr/bin/env bash
 PROJECT="$1"
