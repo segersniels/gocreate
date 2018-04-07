@@ -23,7 +23,7 @@ DIR="${HOME}/go/src/${PROJECT}"
 mkdir -p $DIR
 ln -s $DIR ./$PROJECT
 
-cat > ./${PROJECT}/${PROJECT}.go <<- EOM
+cat > ./${PROJECT}/main.go <<- EOM
 package main
 
 import (
