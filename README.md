@@ -1,6 +1,6 @@
 # gocreate
-One of the things I dislike the most about Golang is the fact that you're bound to your `$GOPATH`.  
-The solution? Create a directory in your `$GOPATH/src` and symlink it to wherever you keep all your other projects.
+One of the things I dislike about Golang (and using Glide) is the fact that you're bound to your `$GOPATH`.  
+The solution? Creating a directory in your `$GOPATH/src` and symlink it to wherever you want the project to be.
 
 ## Installation
 ```bash
