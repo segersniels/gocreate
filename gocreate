@@ -4,7 +4,7 @@ GO=$(go env GOPATH)
 DIR="${GO}/src/github.com/segersniels/${PROJECT}"
 
 # DIR should not already exist
-if [ -d "$DIR" ]; then
+if [ -d "$DIR" ]; then
   echo "ERR: $DIR already exists, exiting..."
   exit 1
 fi
