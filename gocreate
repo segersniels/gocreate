@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 PROJECT="$1"
 GO=$(go env GOPATH)
-DIR="${GO}/src/github.com/segersniels/${PROJECT}"
+USERNAME=$(git config --global user.name)
+DIR="${GO}/src/github.com/${USERNAME}/${PROJECT}"
 
 # DIR should not already exist
 if [ -d "$DIR" ]; then
