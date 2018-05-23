@@ -4,5 +4,5 @@ The solution? Creating a directory in your `$GOPATH/src` and symlink it to where
 
 ## Installation
 ```bash
-curl https://raw.githubusercontent.com/segersniels/gocreate/master/gocreate > /usr/local/bin/gocreate ; chmod +x /usr/local/bin/gocreate
+curl 'https://raw.githubusercontent.com/segersniels/gocreate/master/gocreate' > /usr/local/bin/gocreate ; chmod +x /usr/local/bin/gocreate
 ```
