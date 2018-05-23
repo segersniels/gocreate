@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 PROJECT="$1"
-DIR="${HOME}/go/src/${PROJECT}"
+GO=$(go env GOPATH)
+DIR="${GO}/src/github.com/segersniels/${PROJECT}"
 
+# DIR should not already exist
+if [ -d "$DIR" ]; then
+  echo "ERR: $DIR already exists, exiting..."
+  exit 1
+fi
+
+# Create the DIR and symlink it to a folder inside your current working directory
 mkdir -p $DIR
 ln -s $DIR ./$PROJECT
 
+# Write a basic main template to the newly created directory
 cat > ./${PROJECT}/main.go <<- EOM
 package main
 
@@ -15,4 +24,5 @@ func main() {
 }
 EOM
 
+# Initialise glide
 cd ./$PROJECT ; echo "N" |glide init
